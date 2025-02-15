@@ -67,7 +67,7 @@ const Contact = () => {
       'div',
       { style: { marginTop: '20px', color: 'white', textAlign: 'center' } },
       React.createElement('p', null, 'Email: abatealemu52@gmail.com'),
-      React.createElement('p', null, 'Phone: +251 901 2962'),
+      React.createElement('p', null, 'Phone: +251 901 55 2962'),
       React.createElement('p', null, 'Location: Addis Ababa, Ethiopia')
     )
   );
