@@ -1,0 +1,455 @@
+/* index.css */
+
+/* Global styles */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+body.dark-mode header {
+  background-color: #1f1f1f;}
+  body.dark-mode footer {
+    background-color: #1f1f1f;
+  }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative; /* Required for layering */
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Create the background image with an overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/images/back3.png'); /* Path to your background image */
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Makes the background image fixed when scrolling */
+  opacity: 0.6; /* Sets the transparency level */
+  z-index: -1; /* Places the background behind content */
+}
+/* ✅ Ensure "Abate Alemu" Stays Left and is White */
+.title-container {
+  display: flex;
+  flex-direction: column; /* Stack "Developer" below "Abate Alemu" */
+  align-items: flex-start; /* Align text to the left */
+  color: white; /* ✅ Make text white */
+  margin-left: 20px; /* ✅ Shift it to the left */
+}
+
+/* ✅ Ensure the Name is Clearly Visible */
+.title {
+  font-size: 1.4rem; /* ✅ Adjust font size */
+  font-weight: bold;
+  margin-bottom: -1px; /* ✅ Space between name and developer title */
+  color: white !important; /* ✅ Force white text */
+  margin-left: -400px;
+}
+
+/* ✅ Ensure "Developer" is White and Below the Name */
+.subtitle {
+  font-size: 1.4rem; /* ✅ Smaller font for "Developer" */
+  font-weight: bold;
+  color: white !important; /* ✅ Force white text */
+  margin-left: -400px;
+}
+
+/* ✅ Ensure Left Alignment Works on All Devices */
+@media (max-width: 768px) {
+  .title-container {
+    align-items: flex-start;
+    margin-left: 15px; /* ✅ Adjust for smaller screens */
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+/* ✅ Reduce Header Height */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #0077b6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px 0; /* ✅ Reduce padding to make header smaller */
+  height: 55px; /* ✅ Reduce header height */
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Ensure Navigation Links Fit in the Smaller Header */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* ✅ Ensure Page Content is Visible Below the Header */
+body {
+  padding-top: 60px !important; /* ✅ Push content down to prevent overlap */
+}
+
+/* ✅ Ensure Page Titles (e.g., "Welcome to My Portfolio") Are Visible */
+h1, h2 {
+  margin-top: 20px !important; /* ✅ Ensure space below header */
+}
+
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1.5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #023e8a;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  /*background-color: #023e8a;*/
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+ 
+}
+ 
+/* Home Page */
+.home {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.home h1 {
+  font-size: 3rem;
+  color: #0077b6;
+}
+/* ✅ Ensure "Abate Alemu" Stays on the Left for Any Screen Size */
+ 
+.home p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* Projects Page */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #0077b6;
+}
+
+.project-card p {
+  color: #555;
+}
+
+/* Contact Page */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #023e8a;
+}
+
+
+
+
+
+
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+header nav h1 {
+  font-size: 1.5rem;
+}
+
+header nav ul li a {
+  font-size: 1rem;
+}
+
+
+
+
+
+
+/* responsive design        _*/
+/* Responsive Design - Media Queries */
+
+/* For tablets and small screens (768px and below) */
+/* Responsive Design - Mobile Navigation */
+/* Responsive Navigation for Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0077b6;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column; /* Stack "Developer" below "Abate Alemu" */
+    align-items: flex-start; /* Align text to the left */
+    color: white; /* ✅ Make text white */
+    margin-left: 20px; /* ✅ Shift it to the left */
+  }
+  
+  /* ✅ Ensure the Name is Clearly Visible */
+  .title {
+    font-size: 1.4rem; /* ✅ Adjust font size */
+    font-weight: bold;
+    margin-bottom: -1px; /* ✅ Space between name and developer title */
+    color: white !important; /* ✅ Force white text */
+    margin-left: -200px;
+  }
+  
+  /* ✅ Ensure "Developer" is White and Below the Name */
+  .subtitle {
+    font-size: 1.4rem; /* ✅ Smaller font for "Developer" */
+    font-weight: bold;
+    color: white !important; /* ✅ Force white text */
+    margin-left: -200px;
+  }
+
+
+  .nav-links.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  body {
+    padding-top: 60px; /* Prevent header from covering content */
+  }
+}
+
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  header nav ul {
+    gap: 5px; /* Reduce gap for smaller screens */
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem; /* Smaller font for links */
+  }
+
+  .home h1 {
+    font-size: 2rem; /* Smaller heading */
+  }
+
+  .home p {
+    font-size: 0.8rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr; /* Single column for mobile screens */
+    gap: 10px;
+  }
+
+  .project-card img {
+    height: 120px; /* Adjust image height for smaller screens */
+  }
+
+  .contact {
+    padding: 30px 10px; /* Reduce contact section padding */
+  }
+
+  .contact form {
+    gap: 10px; /* Reduce gap between form elements */
+  }
+}
+/* ✅ Fix: Ensure Hamburger Icon Appears on Mobile */
+ 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block !important; /* ✅ Ensure it appears */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100;
+  }
+
+  /* ✅ Ensure Mobile Navigation Works */
+  .nav-links {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    position: absolute;
+    top: 50px; /* Adjust based on header height */
+    right: 0;
+    background: rgba(0, 119, 182, 0.95);
+    width: 80%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show the menu when toggled */
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
+
+/* ✅ Hide Hamburger on Larger Screens */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* ✅ Fix: Push Header to Top */
+.header {
+  position: fixed; /* ✅ Ensures header stays at the very top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #0077b6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0; /* ✅ Adjust padding so there's no extra space */
+  margin: 0; /* ✅ Remove any unwanted margin */
+}
+
+/* ✅ Fix: Ensure Page Content is Not Hidden by Header */
+body {
+  padding-top: 60px !important; /* ✅ Adjusts page content so it's not covered by the header */
+}
+
+/* ✅ Ensure Page Content is Not Hidden Under Header */
+body {
+  padding-top: 70px !important; /* ✅ Adjust based on header height */
+}
+
+/* ✅ Ensure Each Page's Main Content is Pushed Down */
+.container {
+  padding-top: 20px; /* ✅ Prevents content from being covered */
+}
+
+/* ✅ Ensure Large Headings Like "Welcome to My Portfolio" Are Visible */
+h1, h2 {
+  margin-top: 30px !important;
+}
