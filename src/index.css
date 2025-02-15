@@ -306,7 +306,7 @@ header nav ul li a {
     font-weight: bold;
     margin-bottom: -1px; /* ✅ Space between name and developer title */
     color: white !important; /* ✅ Force white text */
-    margin-left: -200px;
+    margin-left: -100px;
   }
   
   /* ✅ Ensure "Developer" is White and Below the Name */
@@ -314,7 +314,7 @@ header nav ul li a {
     font-size: 1.4rem; /* ✅ Smaller font for "Developer" */
     font-weight: bold;
     color: white !important; /* ✅ Force white text */
-    margin-left: -200px;
+    margin-left: -100px;
   }
 
 
